@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-
+import { useSwipeable } from "react-swipeable";
+import { motion } from "framer-motion";
 interface ImageCarouselProps {
   images: string[];
 }
@@ -14,6 +15,13 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
 
   const showNextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setProgress(0);
+  };
+
+  const showPrevImage = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
     setProgress(0);
   };
 
@@ -50,9 +58,17 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     };
   }, [hovered]);
 
+  const handlers = useSwipeable({
+    onSwipedLeft: showNextImage,
+    onSwipedRight: showPrevImage,
+
+    trackMouse: true,
+  });
+
   return (
     <div
-      className='relative aspect-square  overflow-hidden rounded-lg cursor-pointer'
+      {...handlers}
+      className='relative aspect-square overflow-hidden rounded-lg cursor-pointer'
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -63,16 +79,29 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           alt={`Slide ${index}`}
           width={512}
           height={512}
-          className={`absolute aspect-square  w-full h-auto object-cover inset-0  transition-opacity duration-500 ${
+          className={`absolute aspect-square w-full h-auto object-cover inset-0 transition-opacity duration-500 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         />
       ))}
-      <progress
-        className='progress absolute top-0 left-0 w-full'
-        value={progress}
-        max='100'
-      ></progress>
+      <div className='absolute top-1 rounded-full left-0 w-full flex'>
+        {images.map((_, index) => (
+          <div
+            key={index}
+            className={`h-1 flex-1 mx-1 rounded-sm ${
+              index < currentIndex
+                ? "bg-gray-300" // Цвет для завершенных прогресс-баров
+                : index === currentIndex
+                ? "bg-accent" // Цвет для текущего прогресс-бара
+                : "bg-gray-100" // Цвет для неактивных прогресс-баров
+            }`}
+            style={{
+              width: `${index === currentIndex ? `${progress}%` : "100%"}`,
+              transition: "width 0.1s linear",
+            }}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };

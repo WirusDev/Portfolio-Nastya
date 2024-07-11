@@ -28,7 +28,7 @@ const projectData = [
     ],
     imgAlt: "AlaMode Project",
     title: "AlaMode",
-    description: ["CD", "Logo", "Website", "Mobile App"],
+    description: ["CD", "Logo", "Website", "Branding"],
     link: "/projects/cerise",
   },
   {
@@ -64,7 +64,7 @@ export default function Projects() {
             {projectData[index].description.map((desc, index) => (
               <div
                 key={index}
-                className='badge badge-accent badge-lg text-xl p-4 m-1 '
+                className='badge badge-secondary badge-lg text-xl p-4 m-1 '
               >
                 {desc}
               </div>
