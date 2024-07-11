@@ -8,7 +8,7 @@ import ImageCarousel from "../ui/ImageCarousel";
 const projectData = [
   {
     imgSrc: [
-      "/images/prod/CD/regenbock/vis.jpeg",
+      "/images/prod/CD/regenbock/Vis.jpeg",
       "/images/prod/CD/regenbock/webseite.jpeg",
       "/images/prod/CD/regenbock/poster.jpeg",
       "/images/prod/CD/regenbock/Briefbogen.jpeg",
