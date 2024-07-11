@@ -5,3 +5,77 @@
 /* Добавьте это, если хотите использовать темы DaisyUI */
 @import 'daisyui/dist/full.css';
 
+@font-face {
+    font-family: 'Clash Display';
+    src: url('/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+         url('/fonts/ClashDisplay-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+         url('/fonts/ClashDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('/fonts/ClashDisplay-SemiBold.woff2') format('woff2'),
+         url('/fonts/ClashDisplay-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Clash Display';
+    src: url('/fonts/ClashDisplay-Bold.woff2') format('woff2'),
+         url('/fonts/ClashDisplay-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+/* Custom styles for mytheme headers */
+h1 {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    font-optical-sizing: auto;
+  }
+  
+  h2 {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 600;
+    font-optical-sizing: auto;
+  }
+  
+  h3 {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
+  }
+  
+  h4 {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+  }
+  
+  h5 {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 300;
+    font-optical-sizing: auto;
+  }
+  
+  h6 {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 200;
+    font-optical-sizing: auto;
+  }
+  
+  body {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 300;
+    font-optical-sizing: auto;
+  }

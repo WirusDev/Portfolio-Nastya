@@ -52,7 +52,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
 
   return (
     <div
-      className='relative aspect-[9/16]  overflow-hidden rounded-lg cursor-pointer'
+      className='relative aspect-square  overflow-hidden rounded-lg cursor-pointer'
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -63,7 +63,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           alt={`Slide ${index}`}
           width={512}
           height={512}
-          className={`absolute aspect-[9/16]  w-full h-auto object-cover inset-0  transition-opacity duration-500 ${
+          className={`absolute aspect-square  w-full h-auto object-cover inset-0  transition-opacity duration-500 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         />

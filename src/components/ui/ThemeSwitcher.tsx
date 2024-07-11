@@ -3,40 +3,9 @@
 import React, { useState, useEffect } from "react";
 
 const ThemeSwitcher: React.FC = () => {
-  const themes = [
-    "light",
-    "dark",
-    "cupcake",
-    "bumblebee",
-    "emerald",
-    "corporate",
-    "synthwave",
-    "retro",
-    "cyberpunk",
-    "valentine",
-    "halloween",
-    "garden",
-    "forest",
-    "aqua",
-    "lofi",
-    "pastel",
-    "fantasy",
-    "wireframe",
-    "black",
-    "luxury",
-    "dracula",
-    "cmyk",
-    "autumn",
-    "business",
-    "acid",
-    "lemonade",
-    "night",
-    "coffee",
-    "winter",
-    "mytheme",
-  ];
+  const themes = ["light", "mytheme"];
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("mytheme");
 
   useEffect(() => {
     document.querySelector("html")?.setAttribute("data-theme", theme);
