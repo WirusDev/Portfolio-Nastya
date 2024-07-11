@@ -52,7 +52,7 @@ const Header: React.FC = () => {
           <br />
           <br />
           {/* FOOTER */}
-          <div className='flex flex-row  justify-around gap-1 items-center my-2 rounded-btn max-w-full p-4 bg-base-100'>
+          <div className='flex flex-row  justify-between gap-1 items-center my-2 rounded-btn max-w-full p-4 bg-base-100'>
             <motion.a
               whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
@@ -85,6 +85,17 @@ const Header: React.FC = () => {
               className='text-primary'
             >
               <FontAwesomeIcon icon={["fab", "whatsapp"]} size='2x' />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 0.9 }}
+              title='whatsapp'
+              href='https://wa.me/+4915140486743'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary'
+            >
+              <FontAwesomeIcon icon={["fab", "linkedin"]} size='2x' />
             </motion.a>
           </div>
         </div>

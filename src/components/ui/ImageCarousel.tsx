@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useSwipeable } from "react-swipeable";
+
 interface ImageCarouselProps {
   images: string[];
 }
@@ -24,33 +25,50 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     setProgress(0);
   };
 
+  const resetInterval = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(showNextImage, 2000);
+  };
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+    showNextImage();
+    resetInterval();
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    if (progressRef.current) {
+      clearInterval(progressRef.current);
+      progressRef.current = null;
+    }
+    setProgress(0);
+  };
+
   useEffect(() => {
     if (hovered) {
-      intervalRef.current = setInterval(showNextImage, 2000); // Меняет изображение каждые 2 секунды
       progressRef.current = setInterval(() => {
         setProgress((prevProgress) => {
           if (prevProgress >= 100) {
             clearInterval(progressRef.current!);
             return 100;
           }
-          return prevProgress + 0.5; // Обновление прогресса каждый 10 мс
+          return prevProgress + 0.5;
         });
-      }, 10); // Обновление прогресса каждые 10 мс
+      }, 10);
     } else {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
       if (progressRef.current) {
         clearInterval(progressRef.current);
         progressRef.current = null;
       }
-      setProgress(0);
     }
     return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
       if (progressRef.current) {
         clearInterval(progressRef.current);
       }
@@ -60,7 +78,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const handlers = useSwipeable({
     onSwipedLeft: showNextImage,
     onSwipedRight: showPrevImage,
-
     trackMouse: true,
   });
 
@@ -68,8 +85,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     <div
       {...handlers}
       className='relative aspect-square overflow-hidden rounded-lg cursor-pointer'
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={showNextImage}
     >
       {images.map((src, index) => (
         <Image
