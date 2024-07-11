@@ -64,7 +64,7 @@ export default function Projects() {
             {projectData[index].description.map((desc, index) => (
               <div
                 key={index}
-                className='badge badge-secondary badge-lg text-xl p-4 m-1 '
+                className='badge badge-secondary badge-md text-lg p-3 m-1 '
               >
                 {desc}
               </div>

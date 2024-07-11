@@ -10,12 +10,12 @@ const HomePage = () => {
             type='radio'
             name='my_tabs_2'
             role='tab'
-            className='tab'
+            className='tab [--tab-border-color:#fd62d9]'
             aria-label='About'
           />
           <div
             role='tabpanel'
-            className='tab-content bg-base-100 border-base-300 rounded-box p-6'
+            className='tab-content bg-base-200 border-primary  rounded-box p-6'
           >
             <About />
           </div>
@@ -23,12 +23,12 @@ const HomePage = () => {
             type='radio'
             name='my_tabs_2'
             role='tab'
-            className='tab'
+            className='tab [--tab-border-color:#fd62d9]'
             aria-label='Lebenslauf'
           />
           <div
             role='tabpanel'
-            className='tab-content bg-base-100 border-base-300 rounded-box p-6'
+            className='tab-content bg-base-100 border-primary rounded-box p-6'
           >
             <Timeline />
           </div>
@@ -37,13 +37,13 @@ const HomePage = () => {
             type='radio'
             name='my_tabs_2'
             role='tab'
-            className='tab'
+            className='tab [--tab-border-color:#fd62d9]'
             aria-label='Projekte'
             defaultChecked
           />
           <div
             role='tabpanel'
-            className='tab-content bg-base-100 border-base-300 rounded-box p-6 '
+            className='tab-content bg-base-100 border-primary rounded-box p-6 '
           >
             <Projects />
           </div>

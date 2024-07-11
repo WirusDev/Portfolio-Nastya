@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         aria-label='close sidebar'
         className='drawer-overlay'
       ></label>
-      <div className='menu bg-base-200 text-base-content h-full w-80 px-4 flex flex-col justify-between'>
+      <div className='menu bg-base-200 text-base-content mb-0 w-80 px-4 flex flex-col justify-between'>
         {/* Sidebar content here */}
         <div className=''>
           <Image
@@ -36,14 +36,14 @@ const Header: React.FC = () => {
           <br />
           <Link
             href='mailto:hello@ev-dev.de'
-            className='btn btn-accent flex items-center space-x-2 my-2'
+            className='btn btn-accent flex items-center space-x-2 my-2 uppercase'
           >
             <FontAwesomeIcon icon={["fas", "envelope"]} />
             <span>E-Mail</span>
           </Link>
           <Link
             href='tel:+4915140486743'
-            className='btn btn-secondary flex items-center space-x-2'
+            className='btn btn-secondary flex items-center space-x-2 uppercase'
           >
             <FontAwesomeIcon icon={["fas", "phone"]} />
             <span>Call</span>

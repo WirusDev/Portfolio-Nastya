@@ -1,12 +1,18 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function About() {
   return (
-    <div className='container mx-auto p-4'>
-      <h1 className='text-2xl font-bold mb-4'>
-        Hallo! Ich bin Anastasia, Grafikdesignerin und Content-Creator.
-      </h1>
-
+    <div className='container mx-auto '>
+      <Image
+        src='/images/Anastasia_2.jpg'
+        alt='Anastasia Cozarevici'
+        className='rounded-lg my-1 w-full mask mask-squircle sm:hidden'
+        width={200}
+        height={200}
+      />
+      <h1 className='text-2xl font-bold mb-4'>Hallo!</h1>
+      <p>Ich bin Anastasia, Grafikdesignerin und Content-Creator.</p>
+      <br />
       <div className='prose'>
         <p>
           Ich habe meine Ausbildung zur Grafikdesignerin an der Designschule in
@@ -76,9 +82,6 @@ export default function About() {
         </p>
         <br />
       </div>
-      <Link href='/' className='btn btn-accent mt-4'>
-        Zurück
-      </Link>
     </div>
   );
 }

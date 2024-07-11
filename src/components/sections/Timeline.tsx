@@ -40,10 +40,10 @@ export default function Timeline() {
             <br />
           </div>
 
-          <hr />
+          <hr className='bg-primary' />
         </li>
         <li>
-          <hr />
+          <hr className='bg-primary' />
           <div className='timeline-middle'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -73,10 +73,10 @@ export default function Timeline() {
               Arbeitszeugnis ansehen
             </Link>
           </div>
-          <hr />
+          <hr className='bg-primary' />
         </li>
         <li>
-          <hr />
+          <hr className='bg-primary' />
           <div className='timeline-middle'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -111,10 +111,10 @@ export default function Timeline() {
             <br />
             <br />
           </div>
-          <hr />
+          <hr className='bg-primary' />
         </li>
         <li>
-          <hr />
+          <hr className='bg-primary' />
           <div className='timeline-middle'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -158,10 +158,10 @@ export default function Timeline() {
               Zertifikat ansehen
             </Link>
           </div>
-          <hr />
+          <hr className='bg-primary' />
         </li>
         <li>
-          <hr />
+          <hr className='bg-primary' />
           <div className='timeline-middle'>
             <svg
               xmlns='http://www.w3.org/2000/svg'

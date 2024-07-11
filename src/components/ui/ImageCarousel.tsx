@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useSwipeable } from "react-swipeable";
-import { motion } from "framer-motion";
 interface ImageCarouselProps {
   images: string[];
 }
@@ -84,7 +83,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           }`}
         />
       ))}
-      <div className='absolute top-1 rounded-full left-0 w-full flex'>
+      <div className='absolute top-2 rounded-full left-0 w-full flex'>
         {images.map((_, index) => (
           <div
             key={index}
