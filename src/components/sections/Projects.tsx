@@ -99,6 +99,38 @@ const EDprojectData = [
     link: "/projects/regenbock",
   },
 ];
+const MDprojectData = [
+  {
+    imgSrc: [
+      "/images/prod/Motion Design/1.MOV",
+      "/images/prod/Motion Design/2.MOV",
+      // "/images/prod/Motion Design/3.MP4",
+      // "/images/prod/Motion Design/4.MP4",
+      "/images/prod/Motion Design/5.MOV",
+    ],
+    imgAlt: "Motiondesign",
+    title: "Motiondesign",
+    description: ["Motion Design", "Video", "Animation"],
+    link: "/projects/regenbock",
+  },
+];
+
+const PLprojectData = [
+  {
+    imgSrc: [
+      "/images/prod/plakaten/1.JPG",
+      "/images/prod/plakaten/2.PNG",
+      "/images/prod/plakaten/3.png",
+      "/images/prod/plakaten/4.png",
+      "/images/prod/plakaten/5.png",
+      "/images/prod/plakaten/6.png",
+    ],
+    imgAlt: "Motiondesign",
+    title: "Motiondesign",
+    description: ["Motion Design", "Video", "Animation"],
+    link: "/projects/regenbock",
+  },
+];
 
 export default function Projects() {
   return (
@@ -142,6 +174,57 @@ export default function Projects() {
             {/* </Link> */}
             <div className='h-1'></div>
             {EDprojectData[index].description.map((desc, index) => (
+              <div
+                key={index}
+                className='badge bg-gray-400 text-black badge-md text-lg p-3 m-1 '
+              >
+                {desc}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <br />
+      {/* MOTION DESIGN */}
+      <div className='chat chat-start my-4'>
+        <div className='chat-bubble chat-bubble-accent text-2xl '>
+          <h2>Motion Desing</h2>
+        </div>
+      </div>
+      <div className='grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-4 min-h-[300px]'>
+        {MDprojectData.map((project, index) => (
+          <div key={index}>
+            {/* <Link href={project.link} className='mb-8'> */}
+            <ImageCarousel images={project.imgSrc} />
+            {/* </Link> */}
+            <div className='h-1'></div>
+            {MDprojectData[index].description.map((desc, index) => (
+              <div
+                key={index}
+                className='badge bg-gray-400 text-black badge-md text-lg p-3 m-1 '
+              >
+                {desc}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+      <br />
+
+      {/* PLAKTE */}
+      <div className='chat chat-start my-4'>
+        <div className='chat-bubble chat-bubble-accent text-2xl '>
+          <h2>Plakate</h2>
+        </div>
+      </div>
+      <div className='grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-4 min-h-[300px]'>
+        {PLprojectData.map((project, index) => (
+          <div key={index}>
+            {/* <Link href={project.link} className='mb-8'> */}
+            <ImageCarousel images={project.imgSrc} />
+            {/* </Link> */}
+            <div className='h-1'></div>
+            {PLprojectData[index].description.map((desc, index) => (
               <div
                 key={index}
                 className='badge bg-gray-400 text-black badge-md text-lg p-3 m-1 '

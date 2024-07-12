@@ -18,7 +18,7 @@ const Header: React.FC = () => {
         <div className=''>
           <Image
             src='/images/Anastasia_2.jpg'
-            alt='Evgenii Larin'
+            alt='Anastasia Cozarevici'
             className='rounded-lg my-1 w-full mask mask-squircle'
             width={200}
             height={200}
@@ -35,14 +35,14 @@ const Header: React.FC = () => {
           </p>
           <br />
           <Link
-            href='mailto:hello@ev-dev.de'
+            href='mailto:contact@an-co-design.de'
             className='btn btn-accent flex items-center space-x-2 my-2 uppercase'
           >
             <FontAwesomeIcon icon={["fas", "envelope"]} />
             <span>E-Mail</span>
           </Link>
           <Link
-            href='tel:+4915140486743'
+            href='tel:+491607592026'
             className='btn btn-secondary flex items-center space-x-2 uppercase'
           >
             <FontAwesomeIcon icon={["fas", "phone"]} />
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
               whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
               title='instagram'
-              href='https://www.instagram.com/schenjalarin/'
+              href='https://www.instagram.com/an_co.design/'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary'
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
               whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
               title='telegram'
-              href='https://t.me/EvgeniiLari'
+              href='https://t.me/anco_design'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary'
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
               whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
               title='whatsapp'
-              href='https://wa.me/+4915140486743'
+              href='https://wa.me/+491607592026'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary'
@@ -89,8 +89,8 @@ const Header: React.FC = () => {
             <motion.a
               whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
-              title='whatsapp'
-              href='https://wa.me/+4915140486743'
+              title='linkedin'
+              href='https://www.linkedin.com/in/anastasia-cozarevici-b5a0b9284/'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary'

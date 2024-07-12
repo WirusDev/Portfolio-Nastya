@@ -81,6 +81,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     trackMouse: true,
   });
 
+  const isVideo = (src: string) => {
+    return src.endsWith(".MP4") || src.endsWith(".MOV");
+  };
+
   return (
     <div
       {...handlers}
@@ -90,16 +94,33 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       onClick={showNextImage}
     >
       {images.map((src, index) => (
-        <Image
+        <div
           key={index}
-          src={src}
-          alt={`Slide ${index}`}
-          width={512}
-          height={512}
-          className={`absolute aspect-square w-full h-auto object-cover inset-0 transition-opacity duration-500 ${
+          className={`absolute w-full h-full inset-0 transition-opacity duration-500 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
-        />
+        >
+          {isVideo(src) ? (
+            <video
+              src={src}
+              className='w-full h-full object-cover aspect-square rounded-lg'
+              muted
+              autoPlay
+              loop
+              playsInline
+              disablePictureInPicture
+              style={{ pointerEvents: "none" }}
+            />
+          ) : (
+            <Image
+              src={src}
+              alt={`Slide ${index}`}
+              width={512}
+              height={512}
+              className='w-full h-full object-cover aspect-square rounded-lg'
+            />
+          )}
+        </div>
       ))}
       <div className='absolute top-2 rounded-full left-0 w-full flex'>
         {images.map((_, index) => (

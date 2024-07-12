@@ -32,14 +32,14 @@ export default function Timeline() {
               <div className='text-lg font-black'>„Designschule“ Schwerin</div>
               Grafikdesign & Content Management
               <br />
-              <Link
+              {/* <Link
                 href='/docs/Designschule.pdf'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-blue-500 underline'
               >
                 Zertifikat ansehen
-              </Link>
+              </Link> */}
               <br />
               <br />
             </div>
