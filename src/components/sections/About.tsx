@@ -2,18 +2,23 @@ import Link from "next/link";
 import Image from "next/image";
 export default function About() {
   return (
-    <div className='container mx-auto '>
-      <Image
-        src='/images/Anastasia_2.jpg'
-        alt='Anastasia Cozarevici'
-        className='rounded-lg my-1 w-full mask mask-squircle sm:hidden'
-        width={200}
-        height={200}
-      />
-      <h1 className='text-2xl font-bold mb-4'>Hallo!</h1>
-      <p>Ich bin Anastasia, Grafikdesignerin und Content-Creator.</p>
-      <br />
-      <div className='prose'>
+    <div className='container mx-auto  '>
+      <div className='prose '>
+        <Image
+          src='/images/Anastasia_2.jpg'
+          alt='Anastasia Cozarevici'
+          className='rounded-lg my-1 w-full mask mask-squircle sm:hidden'
+          width={200}
+          height={200}
+        />
+        <div className='chat chat-start my-4'>
+          <div className='chat-bubble chat-bubble-accent text-2xl '>
+            <h1 className=' '>Hallo!</h1>
+          </div>
+        </div>
+
+        <p>Ich bin Anastasia, Grafikdesignerin und Content-Creator.</p>
+        <br />
         <p>
           Ich habe meine Ausbildung zur Grafikdesignerin an der Designschule in
           Schwerin abgeschlossen, wo ich umfassende Kenntnisse und praktische

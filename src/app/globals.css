@@ -79,3 +79,9 @@ h1 {
     font-weight: 300;
     font-optical-sizing: auto;
   }
+
+
+  strong {
+    font-weight: 600;
+    color: #ffda28;
+  }

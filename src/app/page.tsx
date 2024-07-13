@@ -15,7 +15,7 @@ const HomePage = () => {
           />
           <div
             role='tabpanel'
-            className='tab-content bg-base-200 border-primary  rounded-box p-6'
+            className='tab-content bg-base-200 border-primary md:w-[60%]  rounded-box p-6'
           >
             <About />
           </div>

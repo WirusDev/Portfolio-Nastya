@@ -17,8 +17,8 @@ const CDprojectData = [
       "/images/prod/CD/regenbock/logo.jpeg",
     ],
     imgAlt: "Regen-Bock Project",
-    title: "Regen-Bock ",
-    description: ["CD", "Logo", "Webdesign", "Branding"],
+    title: "Regen Bock",
+    description: ["Logo", "Webdesign", "Branding"],
     link: "/projects/regenbock",
   },
   {
@@ -31,8 +31,8 @@ const CDprojectData = [
       "/images/prod/CD/alamode/6-verpackung.JPG",
     ],
     imgAlt: "AlaMode Project",
-    title: "AlaMode",
-    description: ["CD", "Logo", "Website", "Branding"],
+    title: "Ala Mode",
+    description: ["Logo", "Branding"],
     link: "/projects/cerise",
   },
   {
@@ -43,7 +43,7 @@ const CDprojectData = [
     ],
     imgAlt: "Cerise",
     title: "Cerise",
-    description: ["CD", "Logo", "Website", "Mobile App"],
+    description: ["Logo", "Identity", "Website"],
     link: "/projects/cerise",
   },
   {
@@ -53,9 +53,9 @@ const CDprojectData = [
       "/images/prod/CD/galerija/3. träger.JPG",
       "/images/prod/CD/galerija/4.logo.jpg",
     ],
-    imgAlt: "galerija",
-    title: "galerija",
-    description: ["CD", "Logo", "Website", "Mobile App"],
+    imgAlt: "GALLERIJA",
+    title: "GALLERIJA",
+    description: ["Identity", "Logo", "Branding"],
     link: "/projects/cerise",
   },
 ];
@@ -69,9 +69,9 @@ const EDprojectData = [
       "/images/prod/editorial/musikk und protest/5.png",
       "/images/prod/editorial/musikk und protest/6.png",
     ],
-    imgAlt: "musikk und protest",
-    title: "musikk und protest ",
-    description: ["CD", "Logo", "Webdesign", "Branding"],
+    imgAlt: "Musik und Protest",
+    title: "Musik und Protest",
+    description: ["Typografie", "Editorial", "Layout", "Druck"],
     link: "/projects/regenbock",
   },
   {
@@ -79,9 +79,9 @@ const EDprojectData = [
       "/images/prod/editorial/Zeitung_DRUCK/1.png",
       "/images/prod/editorial/Zeitung_DRUCK/2.png",
     ],
-    imgAlt: "Zeitung_DRUCK",
-    title: "Zeitung_DRUCK",
-    description: ["Editorial", "Webdesign", "Branding"],
+    imgAlt: "Zeitung DRUCK",
+    title: "Zeitung 'DRUCK'",
+    description: ["Typografie", "Druck", "Layout"],
     link: "/projects/regenbock",
   },
   {
@@ -93,9 +93,9 @@ const EDprojectData = [
       "/images/prod/editorial/KI und das Bild/5.png",
       "/images/prod/editorial/KI und das Bild/6.png",
     ],
-    imgAlt: "Zeitung_DRUCK",
-    title: "Zeitung_DRUCK",
-    description: ["Editorial", "Webdesign", "Branding"],
+    imgAlt: "KI und das Bild",
+    title: "KI und das Bild",
+    description: ["Editorial", "KI", "Layout", "Druck"],
     link: "/projects/regenbock",
   },
 ];
@@ -104,8 +104,8 @@ const MDprojectData = [
     imgSrc: [
       "/images/prod/Motion Design/1.MOV",
       "/images/prod/Motion Design/2.MOV",
-      // "/images/prod/Motion Design/3.MP4",
-      // "/images/prod/Motion Design/4.MP4",
+      "/images/prod/Motion Design/3.MOV",
+      "/images/prod/Motion Design/4.MOV",
       "/images/prod/Motion Design/5.MOV",
     ],
     imgAlt: "Motiondesign",
@@ -125,9 +125,9 @@ const PLprojectData = [
       "/images/prod/plakaten/5.png",
       "/images/prod/plakaten/6.png",
     ],
-    imgAlt: "Motiondesign",
-    title: "Motiondesign",
-    description: ["Motion Design", "Video", "Animation"],
+    imgAlt: "Plakat Design",
+    title: "",
+    description: [],
     link: "/projects/regenbock",
   },
 ];
@@ -144,10 +144,12 @@ export default function Projects() {
       <div className='grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-4 min-h-[300px]'>
         {CDprojectData.map((project, index) => (
           <div key={index}>
+            <h3>{project.title}</h3>
             {/* <Link href={project.link} className='mb-8'> */}
             <ImageCarousel images={project.imgSrc} />
             {/* </Link> */}
             <div className='h-1'></div>
+
             {CDprojectData[index].description.map((desc, index) => (
               <div
                 key={index}
@@ -169,6 +171,7 @@ export default function Projects() {
       <div className='grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-4 min-h-[300px]'>
         {EDprojectData.map((project, index) => (
           <div key={index}>
+            <h3>{project.title}</h3>
             {/* <Link href={project.link} className='mb-8'> */}
             <ImageCarousel images={project.imgSrc} />
             {/* </Link> */}
@@ -194,6 +197,7 @@ export default function Projects() {
       <div className='grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-4 min-h-[300px]'>
         {MDprojectData.map((project, index) => (
           <div key={index}>
+            <h3>{project.title}</h3>
             {/* <Link href={project.link} className='mb-8'> */}
             <ImageCarousel images={project.imgSrc} />
             {/* </Link> */}
@@ -214,12 +218,13 @@ export default function Projects() {
       {/* PLAKTE */}
       <div className='chat chat-start my-4'>
         <div className='chat-bubble chat-bubble-accent text-2xl '>
-          <h2>Plakate</h2>
+          <h2>Plakat Design</h2>
         </div>
       </div>
       <div className='grid gap-4 grid-cols-1 md:grid-cols-3 xl:grid-cols-4 min-h-[300px]'>
         {PLprojectData.map((project, index) => (
           <div key={index}>
+            <h3>{project.title}</h3>
             {/* <Link href={project.link} className='mb-8'> */}
             <ImageCarousel images={project.imgSrc} />
             {/* </Link> */}
