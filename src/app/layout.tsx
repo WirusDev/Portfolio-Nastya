@@ -1,9 +1,11 @@
 "use client";
 import React, { ReactNode } from "react";
+
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Link from "next/link";
 // import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
@@ -18,7 +20,9 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
               {/* <ThemeSwitcher /> */}
               <div className='p-4'>
                 <h3 className='text-3xl '>
-                  <strong className='text-secondary'>Portfolio</strong>
+                  <strong className='text-secondary'>
+                    <Link href={"/"}>Portfolio</Link>{" "}
+                  </strong>
                 </h3>
                 <p>by Anastasia Co. </p>
               </div>
